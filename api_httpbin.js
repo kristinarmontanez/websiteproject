@@ -40,7 +40,7 @@ document.getElementById("button_id").addEventListener("click", function(event)
     {var bin_input = document.getElementById("bin").value
     //get the value of the input.
 	var bin_request = new XMLHttpRequest()
-	bin_request.open('POST', "http://httpbin.org/post", true)
+	bin_request.open('POST', "https://httpbin.org/post", true)
     //start the POST request.
 	bin_request.setRequestHeader('Content-Type', 'application/json')
     bin_request.addEventListener('load', function() 

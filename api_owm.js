@@ -25,10 +25,10 @@ document.getElementById("button_id1").addEventListener("click", function()
 	//get the values of each input given.
 	if(zip == "" || zip == null)
 		{ 
-		request_url = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + apiKey}
+		request_url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + apiKey}
 	if(city == "" || city == null)
 		{ 
-		request_url = "http://api.openweathermap.org/data/2.5/weather?q=" + zip + "," + country + "&units=imperial&appid=" + apiKey}
+		request_url = "https://api.openweathermap.org/data/2.5/weather?q=" + zip + "," + country + "&units=imperial&appid=" + apiKey}
 	//if the user gives us a city code, we will send a request with the city in GET request, and vise versa.
 	//also, while looking through the website, Open Weather Map gives you imperial measurements too.
 		

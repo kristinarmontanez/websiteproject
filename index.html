@@ -1,1 +1,44 @@
-<p> hello world </p>
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+
+
+<form>
+    <h1> Weather Query</h1>
+<fieldset>
+<h3> Please provide (1) City or Zip code and (2) Country:</h3>
+    <label for="city">City:</label>
+<input type="text" name="test" id="city">
+<label for="zip"><b>or</b> Zip:</label>
+<input type="text" name="test" id="zip"><br>
+<p>
+<label for="city">  Country:</label>
+<input type="text" name="test" id="country"> 
+<a href="https://www.iso.org/obp/ui/#iso:pub:PUB500001:en" target="_blank">Please use "ISO 3166" country codes as shown here</a>
+</fieldset>
+</form>
+</p>
+<p>
+<script src="api_owm.js" type="application/javascript"></script>
+</p>
+<p>The temperature is currently: </p><span id="result1"></span><br>
+<p>The humidity is currently: </p> <span id="result2"></span><br>
+
+
+
+
+<form>        
+    <h1> HTTPBIN</h1>
+<fieldset>
+<legend> Type Anything Here:</legend>
+<input type="text" name="httpbin" id="bin">
+</fieldset>
+</form>
+<p>
+<script src="api_httpbin.js" type="application/javascript"></script>
+</p>
+
+</body>
+</head>
+</html>

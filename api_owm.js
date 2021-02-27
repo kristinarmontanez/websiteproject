@@ -33,7 +33,7 @@ document.getElementById("button_id1").addEventListener("click", function()
 	//also, while looking through the website, Open Weather Map gives you imperial measurements too.
 		
 	var weather_request = new XMLHttpRequest()
-	weather_request.open('GET', request_url, true)
+	weather_request.open('GET', "https://www.benbrougher.tech/hiker/v1/trails/", true)
 	//start the GET request. 
 		weather_request.addEventListener('load', function() 
 		//add the next event listener in case there is an error.
@@ -42,16 +42,16 @@ document.getElementById("button_id1").addEventListener("click", function()
 				//as explained in class, lvl 200-400 messages are ok, but 400+ are usually error messages.
 				{
 				var response = JSON.parse(weather_request.responseText)
-			  	var temperature = document.createTextNode(response.main.temp)
-				var humidity = document.createTextNode(response.main.humidity)
+			  	var temperature = document.createTextNode(response)
+				var humidity = document.createTextNode(response)
 				//grab the object's name from each-temp and humidity. Don't forget to use
 				//"createTextNode" as this will allow you to transform data into a string text. 
 				//THIS PART TOOK WAY TO LONG TO DEBUG...
 				var temp = document.getElementById("result1") 
-				var humid = document.getElementById("result2")
+				
 				//Then place these items to their places after the first form.
 				temp.appendChild(document.createTextNode(temperature.textContent))
-				humid.appendChild(document.createTextNode(humidity.textContent))
+				
 				//if we do not get an error message, then load the content as usual.
 				}
 			else 
